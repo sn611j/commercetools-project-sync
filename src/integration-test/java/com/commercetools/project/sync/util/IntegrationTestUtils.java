@@ -84,7 +84,7 @@ public final class IntegrationTestUtils {
     deletionStages.add(lastSyncCustomObjectDeletionFutures);
 
     // 3. Then delete all in parallel
-    CompletableFuture.allOf(deletionStages.toArray(new CompletableFuture[0])).join();
+    CompletableFuture.allOf(deletionStages.toArray(CompletableFuture[]::new)).join();
   }
 
   private IntegrationTestUtils() {}
