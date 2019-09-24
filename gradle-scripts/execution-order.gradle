@@ -12,10 +12,6 @@ compileIntegrationTestJava.mustRunAfter compileTestJava
 pmdTest.mustRunAfter pmdMain
 pmdIntegrationTest.mustRunAfter pmdTest
 
-//FindBugs sub-tasks execution order
-findbugsTest.mustRunAfter findbugsMain
-findbugsIntegrationTest.mustRunAfter findbugsTest
-
 //Jacoco sub-tasks execution order
 jacocoTestReport.mustRunAfter jacocoTestCoverageVerification
 
@@ -23,12 +19,10 @@ jacocoTestReport.mustRunAfter jacocoTestCoverageVerification
 /**
  * Global execution order
  */
-// Ensure FindBugs runs after PMD
+// Ensure PMD runs after Compilation
 pmdMain.mustRunAfter compileIntegrationTestJava
-// Ensure FindBugs runs after PMD
-findbugsMain.mustRunAfter pmdIntegrationTest
-// Ensure dependencyUpdates runs after findbugsIntegrationTest
-dependencyUpdates.mustRunAfter findbugsIntegrationTest
+// Ensure dependencyUpdates runs after pmdIntegrationTest
+dependencyUpdates.mustRunAfter pmdIntegrationTest
 // Ensure unit tests are run after dependencyUpdates
 test.mustRunAfter dependencyUpdates
 // Ensure integration tests are run after unit tests and are part of check

@@ -1,12 +1,12 @@
 package com.commercetools.project.sync.model;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
 import com.commercetools.project.sync.util.SyncUtils;
 import com.commercetools.sync.products.helpers.ProductSyncStatistics;
-import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
-import java.time.ZonedDateTime;
 import org.junit.jupiter.api.Test;
+
+import java.time.ZonedDateTime;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 class LastSyncCustomObjectTest {
 
@@ -127,11 +127,6 @@ class LastSyncCustomObjectTest {
   }
 
   @Test
-  @SuppressFBWarnings(
-      value = "EC_UNRELATED_TYPES",
-      justification =
-          "We suppress the FB warning here, to cover the test case of using "
-              + "LastSyncCustomObject#equals on comparing different types.")
   void equals_WithDifferentType_ShouldReturnFalse() {
     // preparation
     final int lastSyncDurationInSeconds = 100;

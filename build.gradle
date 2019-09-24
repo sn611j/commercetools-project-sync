@@ -15,6 +15,7 @@ plugins {
     id 'com.adarshr.test-logger' version '1.7.0'
     id "com.diffplug.gradle.spotless" version '3.23.0'
     id 'com.bmuschko.docker-java-application' version '4.9.0'
+    id "com.github.spotbugs" version "2.0.0"
 }
 
 apply from: "$rootDir/gradle-scripts/extensions.gradle"
@@ -29,7 +30,6 @@ apply from: "$rootDir/gradle-scripts/dependencies.gradle"
 apply from: "$rootDir/gradle-scripts/spotless.gradle"
 apply from: "$rootDir/gradle-scripts/pmd.gradle"
 apply from: "$rootDir/gradle-scripts/jacoco.gradle"
-apply from: "$rootDir/gradle-scripts/findbugs.gradle"
 apply from: "$rootDir/gradle-scripts/shadow.gradle"
 apply from: "$rootDir/gradle-scripts/docker.gradle"
 apply from: "$rootDir/gradle-scripts/execution-order.gradle"
