@@ -48,6 +48,7 @@ import uk.org.lidalia.slf4jtest.LoggingEvent;
 import uk.org.lidalia.slf4jtest.TestLogger;
 import uk.org.lidalia.slf4jtest.TestLoggerFactory;
 
+@SuppressWarnings("PMD.MoreThanOneLogger")
 class SyncerFactoryTest {
   private static final TestLogger syncerTestLogger = TestLoggerFactory.getTestLogger(Syncer.class);
   private static final TestLogger cliRunnerTestLogger =
