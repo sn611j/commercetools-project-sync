@@ -4,7 +4,7 @@ ext {
     slf4jVersion = '1.7.25'
     slf4jTestVersion = '1.2.0'
     assertjVersion = '3.12.2'
-    pmdVersion = '5.6.1'
+    pmdVersion = '6.18.0'
     jacocoVersion = '0.7.9'
     findbugsVersion = '3.0.1'
     commercetoolsSyncJava='1.1.1'
